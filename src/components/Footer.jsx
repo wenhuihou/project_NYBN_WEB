@@ -9,7 +9,7 @@ const Footer = () => (
         <img
           src={logo}
           alt="nybn"
-          className="w-[400px] h-[72.14px] object-contain"
+          className="w-full max-w-[400px] h-auto object-contain"
         />
         <p className={`${styles.paragraph} text-gray-600 mt-4 ml-16 max-w-[312px]`}>
             北京宁远博纳电子科技有限责任公司,成立于2016年，公司位于北京市石景山区，并在江苏昆山市设有办事处。
@@ -18,7 +18,7 @@ const Footer = () => (
 
       <div className="flex-[0.5] w-full flex flex-row flex-wrap md:mt-0 mt-20">
         {footerLinks.map((footerlink) => (
-          <div key={footerlink.title} className={`flex flex-col ss:my-4 my-4 min-w-[350px]`}>
+          <div key={footerlink.title} className={`flex flex-col ss:my-4 my-4 min-w-0`}>
             <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-gray-800">
               {footerlink.title}
             </h4>

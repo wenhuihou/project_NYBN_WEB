@@ -49,8 +49,8 @@ const Products = () => {
 
     return (
         <section id="product" className={layout.section}>
-            <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16`}>
-                <div className="font-poppins font-semibold min-w-[600px] ss:text-[46px] text-[28px] text-sky-900 ss:leading-[100.8px] leading-[75x]">
+            <div className={`flex-1 ${styles.flexStart} flex-col ${styles.sectionPadding}`}>
+                <div className={styles.heading3}>
                     产品系列： <br className="sm:block hidden" />
                 </div>
         <Box sx={{ width: '100%'}}>
@@ -58,13 +58,15 @@ const Products = () => {
                 <Tabs value={value}
                       onChange={handleChange}
                       textColor="primary"
-                      aria-label="basic tabs" centered>
+                      variant="scrollable"
+                      scrollButtons="auto"
+                      aria-label="basic tabs">
                     <Tab label="Electronic ceramics" {...a11yProps(0)}
-                         sx={{fontSize:'30px', color:'#214d76'}}/>
+                         sx={{fontSize: { xs: '16px', sm: '20px', md: '30px' }, color: '#214d76'}}/>
                     <Tab label="Advanced Packaging" {...a11yProps(1)}
-                         sx={{fontSize:'30px', color:'#214d76'}}/>
+                         sx={{fontSize: { xs: '16px', sm: '20px', md: '30px' }, color: '#214d76'}}/>
                     <Tab label="Semiconductor" {...a11yProps(2)}
-                          sx={{fontSize:'30px', color:'#214d76'}}/>
+                         sx={{fontSize: { xs: '16px', sm: '20px', md: '30px' }, color: '#214d76'}}/>
                 </Tabs>
             </Box>
             { category.map((c, index) => (
